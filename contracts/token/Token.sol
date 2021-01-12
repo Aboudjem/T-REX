@@ -24,15 +24,9 @@
 pragma solidity ^0.6.2;
 
 import './IToken.sol';
-import '@onchain-id/solidity/contracts/IERC734.sol';
-import '@onchain-id/solidity/contracts/IERC735.sol';
-import '@onchain-id/solidity/contracts/IIdentity.sol';
-import '../registry/IClaimTopicsRegistry.sol';
-import '../registry/IIdentityRegistry.sol';
-import '../compliance/ICompliance.sol';
-import 'openzeppelin-solidity/contracts/math/SafeMath.sol';
 import './Storage.sol';
 import '../roles/AgentRoleUpgradeable.sol';
+import 'openzeppelin-solidity/contracts/math/SafeMath.sol';
 
 contract Token is IToken, AgentRoleUpgradeable, Storage {
     using SafeMath for uint256;
